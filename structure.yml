@@ -1,0 +1,59 @@
+.
+├── parkyapi
+│   ├── Dockerfile
+│   ├── ParkyAPI.csproj
+│   └── Program.cs
+├── db
+│   └── password.txt
+├── compose.yaml
+├── proxy
+│   ├── conf
+│   └── Dockerfile
+└── README.md
+
+
+compose.yml
+
+services:
+    parkyapi:
+        build:
+            context: parkyapi
+        target: dev-envs
+        restart: always
+        secrets:
+            - db-password
+        depends_on: ['db']
+        environment:
+            - ASPNETCORE_URLS=http://+:8080
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+    
+    db:
+        #We use a mariabd image which supports both amd64 & arm64 architectures
+        #image: mariadb:10-focal
+        # If you really want to use MySQL, uncomment the following line
+        #image: mcr.microsoft.com/azure-sql-edge:1.0.4
+        #image: mcr.microsoft.com/mssql/server
+        image: mysql:8
+        command: '--default-authentication-plugin=mysql_native_password'
+        restart: always
+        secrets:
+            - db-password
+        volumes:
+            - db-data:/var/lib/mysql
+        environment:
+            - MYSQL_DATABASE=example
+            - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db-password
+
+    proxy:
+        build: proxy
+        ports:
+            - 80:80
+        depends_on:
+            - parkyapi
+
+volumes:
+    db-data:
+secrets:
+    db-password:
+        file: db/password.txt
