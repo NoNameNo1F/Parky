@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParkyAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ParkyAPI.Controllers.NationalParkController.GetNationalParks">
+            <summary>
+            Get list of national parks.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ParkyAPI.Controllers.NationalParkController.GetNationalPark(System.Int32)">
+            <summary>
+            Get individual national park.
+            </summary>
+            <param name="nationalParkId"> The Id of the national park </param>
+            <returns></returns>
+        </member>
+        <member name="T:ParkyAPI.Migrations.AddNationalParkToDb">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddNationalParkToDb.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddNationalParkToDb.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddNationalParkToDb.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

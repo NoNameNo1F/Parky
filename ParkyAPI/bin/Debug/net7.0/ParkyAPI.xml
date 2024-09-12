@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParkyAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ParkyAPI.Controllers.NationalParksController.GetNationalParks">
+            <summary>
+            Get list of national parks.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ParkyAPI.Controllers.NationalParksController.GetNationalPark(System.Int32)">
+            <summary>
+            Get individual national park.
+            </summary>
+            <param name="nationalParkId"> The id of the national park </param>
+            <returns></returns>
+        </member>
+        <member name="M:ParkyAPI.Controllers.NationalParksV2Controller.GetNationalParks">
+            <summary>
+            Get list of national parks.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ParkyAPI.Controllers.TrailsController.GetTrails">
+            <summary>
+            Get list of trails.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ParkyAPI.Controllers.TrailsController.GetTrail(System.Int32)">
+            <summary>
+            Get individual trail.
+            </summary>
+            <param name="trailId"> The id of the trail </param>
+            <returns></returns>
+        </member>
+        <member name="T:ParkyAPI.Migrations.AddNationalParkToDb">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddNationalParkToDb.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddNationalParkToDb.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddNationalParkToDb.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ParkyAPI.Migrations.AddTrailsToDb">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddTrailsToDb.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddTrailsToDb.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddTrailsToDb.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ParkyAPI.Migrations.AddElevationToTrail">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddElevationToTrail.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddElevationToTrail.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddElevationToTrail.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ParkyAPI.Migrations.AddUserToDb">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddUserToDb.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddUserToDb.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParkyAPI.Migrations.AddUserToDb.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

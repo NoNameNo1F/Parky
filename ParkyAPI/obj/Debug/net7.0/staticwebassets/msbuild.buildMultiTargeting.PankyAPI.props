@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PankyAPI.props" />
+</Project>
